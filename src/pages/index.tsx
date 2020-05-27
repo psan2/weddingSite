@@ -8,22 +8,40 @@ import Bloom from "../components/bloom"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{ textAlign: "center" }}>
-      <div style={{ display: "inline-block", width: "300px" }}>
-        <Bloom />
-      </div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <div
         style={{
           display: "inline-block",
-          width: "300px",
+          width: "50%",
           marginBottom: "10px",
         }}
       >
-        <Cleo />
+        <div style={{ display: "inline-block", width: "50%" }}>
+          <Bloom />
+        </div>
+        <div
+          style={{
+            display: "inline-block",
+            width: "50%",
+            marginBottom: "10px",
+          }}
+        >
+          <Cleo />
+        </div>
       </div>
-      <div style={{ width: "700px", display: "inline-block" }}>
+    </div>
+    <div style={{ textAlign: "center" }}>
+      <div
+        style={{ display: "inline-block", width: "100%", maxWidth: "500px" }}
+      >
         <p>
-          Oops... you're early! Earlier than Pat thought you'd might be, anyway.
+          Oops... you're early! Earlier than Pat thought you might be, anyway.
         </p>
         <p>
           We'll be posting additional wedding details in the near future. In the
