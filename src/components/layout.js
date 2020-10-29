@@ -14,10 +14,14 @@ import "./layout.css"
 const Layout = ({ children }) => {
   return (
     <>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
       <div
         style={{
           margin: `20px auto`,
-          maxWidth: 1024,
+          maxWidth: 1440,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >

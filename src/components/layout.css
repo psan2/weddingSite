@@ -621,3 +621,12 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.share-width {
+  flex-grow: 1;
+}
+
+.button {
+  float: right;
+  margin-top: 100px;
+}
