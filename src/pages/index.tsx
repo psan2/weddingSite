@@ -34,7 +34,7 @@ const IndexPage = () => (
       </Grid>
       <Grid item={true} xs={12} md={4}>
         <h2>Help us stay in touch!</h2>
-        <p>
+        <p style={{ marginBottom: 0 }}>
           Enter your contact info here to receive updates by email, and to make
           sure we have the right address for you ✉️
         </p>
