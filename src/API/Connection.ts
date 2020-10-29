@@ -1,7 +1,6 @@
 import { APIValues } from "../components/ContactForm/types"
 
-// const API_BASE_URL = "https://wedding-site-backend.herokuapp.com"
-const API_BASE_URL = "http://localhost:3000"
+const API_BASE_URL = "https://wedding-site-backend.herokuapp.com"
 const HEADERS = {
   "Content-Type": "application/json",
   Accept: "application/json",
