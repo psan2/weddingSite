@@ -21,6 +21,7 @@ export const ContactForm = props => {
         setErrorOpen(true)
       } else {
         setSuccessOpen(true)
+        setFormValues(defaultFormValues)
       }
     })
   }
