@@ -57,7 +57,7 @@ const Header = () => (
         }}
         href="https://www.mcdowellmountaingc.com/"
       >
-        Venue
+        The Venue
       </a>
     </ul>
   </header>

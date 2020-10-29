@@ -27,6 +27,22 @@ const Layout = ({ children }) => {
       >
         <Header siteTitle="Home" />
         <main>{children}</main>
+        <footer
+          style={{
+            marginTop: `12rem`,
+            marginLeft: "auto",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          Created by
+          <a
+            style={{ marginLeft: "5px", textDecoration: "none" }}
+            href="https://www.github.com/psan2"
+          >
+            Pat Santucci 🥳
+          </a>
+        </footer>
       </div>
     </>
   )
