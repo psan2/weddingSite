@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Fez from "./Fez"
+import fezPng from "../images/fez.png"
 
 const Header = () => (
   <header
@@ -33,7 +33,11 @@ const Header = () => (
           }}
         >
           <span style={{ float: "left" }}>
-            <Fez />
+            <img
+              style={{ margin: "0 auto", width: 50 }}
+              src={fezPng}
+              alt="Fez logo"
+            />
           </span>
           <span
             style={{

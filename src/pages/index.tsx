@@ -2,8 +2,8 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Cleo from "../components/Cleo"
-import Bloom from "../components/Bloom"
+import bloomPng from "../images/bloom.png"
+import cleoPng from "../images/cleo.png"
 import Header from "../components/header"
 
 const IndexPage = () => (
@@ -25,7 +25,7 @@ const IndexPage = () => (
         }}
       >
         <div style={{ display: "inline-block", width: "50%" }}>
-          <Bloom />
+          <img src={bloomPng} alt="Cat with a Fez" />
         </div>
         <div
           style={{
@@ -34,7 +34,7 @@ const IndexPage = () => (
             marginBottom: "10px",
           }}
         >
-          <Cleo />
+          <img src={cleoPng} alt="Cat with a bonnet" />
         </div>
       </div>
     </div>

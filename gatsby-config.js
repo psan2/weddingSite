@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Pat & Michelle's Wedding`,
-    description: `Our wedding site for Scottsdale, AZ in December 2020!`,
+    description: `Our wedding site for Scottsdale, AZ in October 2021!`,
     author: `@psan2`,
   },
   plugins: [
