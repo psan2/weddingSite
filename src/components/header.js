@@ -1,32 +1,67 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Fez from "./Fez"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
+        minWidth: 500,
         padding: `1.45rem 1.0875rem`,
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "nowrap",
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+      <Link
+        to="/"
+        style={{
+          textDecoration: `none`,
+          color: "black",
+        }}
+      >
+        <div
           style={{
-            color: `white`,
-            textDecoration: `none`,
+            display: "flex",
+            alignItems: "center",
           }}
         >
-          {siteTitle}
-        </Link>
-      </h1>
+          <span style={{ float: "left" }}>
+            <Fez />
+          </span>
+          <span
+            style={{
+              fontSize: "1.5rem",
+              justifyContent: "center",
+              paddingLeft: "5px",
+            }}
+          >
+            Mantucci Wedding 2020
+          </span>
+        </div>
+      </Link>
+      <ul
+        style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "auto" }}
+      >
+        <a
+          style={{
+            fontSize: "1.5rem",
+            textDecoration: "none",
+            color: "black",
+            padding: "10px",
+            borderBottom: "1px solid black",
+          }}
+          href="https://www.mcdowellmountaingc.com/"
+        >
+          Venue
+        </a>
+      </ul>
     </div>
   </header>
 )

@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
           margin: `20px auto`,
           maxWidth: 1024,
           padding: `0 1.0875rem 1.45rem`,
-          textAlign: "center",
         }}
       >
         <main>{children}</main>

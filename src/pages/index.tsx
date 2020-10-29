@@ -2,11 +2,13 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Cleo from "../components/cleo"
-import Bloom from "../components/bloom"
+import Cleo from "../components/Cleo"
+import Bloom from "../components/Bloom"
+import Header from "../components/header"
 
 const IndexPage = () => (
   <Layout>
+    <Header siteTitle="Home" />
     <SEO title="Home" />
     <div
       style={{
@@ -38,15 +40,14 @@ const IndexPage = () => (
     </div>
     <div style={{ textAlign: "center" }}>
       <div
-        style={{ display: "inline-block", width: "100%", maxWidth: "500px" }}
+        style={{ display: "inline-block", width: "100%", minWidth: "500px" }}
       >
+        <h2>Wedding Updates</h2>
         <p>
-          Oops... you're early! Earlier than Pat thought you might be, anyway.
-        </p>
-        <p>
-          We'll be posting additional wedding details in the near future. In the
-          meantime, we hope you'll join us in Scottsdale, AZ on December 5th,
-          2020!
+          Given the state of the world and out of consideration for everyone's
+          safety, we've decided to postpone our wedding. We're still very
+          excited to see each and every one of you there, and we hope that
+          you'll be able to join us on October 30, 2021!
         </p>
         <p>
           Feel free to email us at{" "}
