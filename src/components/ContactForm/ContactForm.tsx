@@ -2,20 +2,32 @@ import React, { useState } from "react"
 import { Box, Button, Grid, Icon, TextField } from "@material-ui/core"
 import { CountrySelector } from "./CountrySelector"
 import { Fields, FormValues } from "./types"
-import { defaultFormValues } from "./util"
+import { defaultFormValues, formValuesToAPIValues } from "./util"
+import { createContact } from "../../API/Connection"
+import { StateSelector } from "./StateSelector"
 
-export const ContactForm = () => {
+export const ContactForm = props => {
+  const { setSuccessOpen, setErrorOpen } = props
   const [formValues, setFormValues] = useState<FormValues>(defaultFormValues)
 
   const handleFormChange = (fieldName: Fields, value: string) => {
     setFormValues({ ...formValues, [fieldName]: value })
   }
 
-  const handleSubmit = () => {}
+  const handleSubmit = () => {
+    const submission = formValuesToAPIValues(formValues)
+    createContact(submission).then(data => {
+      if (Object.values(data).some(value => Array.isArray(value))) {
+        setErrorOpen(true)
+      } else {
+        setSuccessOpen(true)
+      }
+    })
+  }
 
   return (
     <form>
-      <Grid container direction="row">
+      <Grid container className="contact-form" direction="row">
         <TextField
           required={true}
           className="share-width"
@@ -67,19 +79,28 @@ export const ContactForm = () => {
             handleFormChange(Fields.city, e.target.value)
           }}
         />
-        <TextField
-          className="share-width"
-          id="state"
-          label="State"
-          required={formValues.country === "USA"}
-          disabled={formValues.country !== "USA"}
+        <StateSelector
           value={formValues.state}
-          onChange={e => {
-            handleFormChange(Fields.state, e.target.value)
-          }}
+          handleFormChange={handleFormChange}
+          disabled={formValues.country !== "USA"}
         />
-        <CountrySelector value={"USA"} handleFormChange={handleFormChange} />
       </Grid>
+      <TextField
+        className="share-width"
+        id="zip"
+        label="Zip/Postal Code"
+        fullWidth={true}
+        required={true}
+        value={formValues.zipCode}
+        onChange={e => {
+          handleFormChange(Fields.zipCode, e.target.value)
+        }}
+      />
+      <CountrySelector
+        defaultValue={"USA"}
+        value={formValues.country}
+        handleFormChange={handleFormChange}
+      />
       <TextField
         required={true}
         id="phone"

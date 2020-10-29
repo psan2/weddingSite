@@ -3,15 +3,17 @@ import React from "react"
 import { Fields } from "./types"
 
 export const CountrySelector = props => {
-  const { value, handleFormChange } = props
+  const { defaultValue, value, handleFormChange } = props
 
   return (
     <TextField
       select
-      defaultValue={props.value}
-      className="share-width"
+      defaultValue={defaultValue}
+      value={value}
       id="country"
       label="Country"
+      required={true}
+      fullWidth={true}
       onChange={e => {
         handleFormChange(Fields.country, e.target.value)
       }}
