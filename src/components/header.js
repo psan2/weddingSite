@@ -7,66 +7,59 @@ const Header = () => (
   <header
     style={{
       marginBottom: `1.45rem`,
+      margin: `0 auto`,
+      minWidth: 500,
+      padding: `1.45rem 1.0875rem`,
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "nowrap",
     }}
   >
-    <div
+    <Link
+      to="/"
       style={{
-        margin: `0 auto`,
-        minWidth: 500,
-        padding: `1.45rem 1.0875rem`,
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "nowrap",
+        textDecoration: `none`,
+        color: "black",
       }}
     >
-      <Link
-        to="/"
+      <div
         style={{
-          textDecoration: `none`,
-          color: "black",
+          display: "flex",
+          alignItems: "center",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <span style={{ float: "left" }}>
-            <img
-              style={{ margin: "0 auto", width: 50 }}
-              src={fezPng}
-              alt="Fez logo"
-            />
-          </span>
-          <span
-            style={{
-              fontSize: "1.5rem",
-              justifyContent: "center",
-              paddingLeft: "5px",
-            }}
-          >
-            Mantucci Wedding 2020
-          </span>
-        </div>
-      </Link>
-      <ul
-        style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "auto" }}
-      >
-        <a
+        <span style={{ float: "left" }}>
+          <img
+            style={{ margin: "0 auto", width: 50 }}
+            src={fezPng}
+            alt="Fez logo"
+          />
+        </span>
+        <span
           style={{
             fontSize: "1.5rem",
-            textDecoration: "none",
-            color: "black",
-            padding: "10px",
-            borderBottom: "1px solid black",
+            justifyContent: "center",
+            paddingLeft: "5px",
           }}
-          href="https://www.mcdowellmountaingc.com/"
         >
-          Venue
-        </a>
-      </ul>
-    </div>
+          Mantucci Wedding 2020
+        </span>
+      </div>
+    </Link>
+    <ul style={{ marginTop: "auto", marginBottom: "auto", marginLeft: "auto" }}>
+      <a
+        style={{
+          fontSize: "1.5rem",
+          textDecoration: "none",
+          color: "black",
+          padding: "10px",
+          borderBottom: "1px solid black",
+        }}
+        href="https://www.mcdowellmountaingc.com/"
+      >
+        Venue
+      </a>
+    </ul>
   </header>
 )
 

@@ -7,6 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import Header from "./header"
 
 import "./layout.css"
 
@@ -20,6 +21,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <Header siteTitle="Home" />
         <main>{children}</main>
       </div>
     </>
