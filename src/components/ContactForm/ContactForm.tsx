@@ -17,7 +17,7 @@ export const ContactForm = props => {
   const handleSubmit = () => {
     const submission = formValuesToAPIValues(formValues)
     createContact(submission).then(data => {
-      if (Object.values(data).some(value => Array.isArray(value))) {
+      if (Object.values(data).some(value => Array.isArray(value)) || !data) {
         setErrorOpen(true)
       } else {
         setSuccessOpen(true)
